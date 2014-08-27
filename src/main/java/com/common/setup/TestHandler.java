@@ -1,6 +1,7 @@
 package com.common.setup;
 
 import com.common.utils.PropertyFileReader;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
  * User: mbauer
@@ -12,11 +13,12 @@ public class TestHandler {
     private static final String baseUrl = PropertyFileReader.getValueForProperty("environment");
 
     public static void handleTestStart() {
-        Driver.getInstance().manage().window().maximize();
-        Driver.getInstance().get(baseUrl);
+        Driver.driver = new FirefoxDriver();
+        Driver.getDriver().manage().window().maximize();
+        Driver.getDriver().get(baseUrl);
     }
 
     public static void handleTestFinish() {
-        Driver.getInstance().quit();
+        Driver.getDriver().quit();
     }
 }

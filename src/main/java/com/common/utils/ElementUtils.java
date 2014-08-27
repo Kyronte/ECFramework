@@ -15,11 +15,11 @@ import java.util.List;
 public class ElementUtils {
 
     private final static int MAX_WAIT = 20;
-    protected static WebDriverWait wait = new WebDriverWait(Driver.getInstance(), MAX_WAIT);
+    protected static WebDriverWait wait = new WebDriverWait(Driver.getDriver(), MAX_WAIT);
 
     public static boolean isElementPresent(By by) {
         try {
-            Driver.getInstance().findElement(by);
+            Driver.getDriver().findElement(by);
             return true;
         } catch (NoSuchElementException e) {
             return false;
@@ -47,7 +47,7 @@ public class ElementUtils {
     }
 
     public static void handleButtonClick(String id) {
-        List<WebElement> buttons = Driver.getInstance().findElements(By.id(id));
+        List<WebElement> buttons = Driver.getDriver().findElements(By.id(id));
         for(WebElement button : buttons) {
             if(button.getAttribute("type").equals("submit")) {
                 button.click();

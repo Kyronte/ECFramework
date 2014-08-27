@@ -9,13 +9,7 @@ import org.testng.annotations.BeforeTest;
  */
 public class BaseTest {
 
-    @BeforeTest
-    public void setUp() {
-        TestHandler.handleTestStart();
-    }
 
-    @AfterTest
-    public void tearDown() {
-        TestHandler.handleTestFinish();
-    }
+
+
 }

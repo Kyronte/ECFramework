@@ -22,7 +22,7 @@ public class ActionPerformer {
     }
 
     public ActionPerformer() {
-        driver = Driver.getInstance();
+        driver = Driver.getDriver();
         builder = new Actions(driver);
     }
 
