@@ -1,6 +1,7 @@
 package com.application;
 
 import com.common.setup.Driver;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 
 /**
@@ -12,11 +13,16 @@ public class SeleniumHomePage {
 
     private static final String expectedTitle = "Selenium - Web Browser Automation";
 
-    private static String getPageTitle() {
-        return Driver.getInstance().getTitle();
-    }
-
     public static void isExpectedTitle() {
         Assert.assertEquals(getPageTitle(), expectedTitle);
+    }
+
+    public static void navigateToDownloadsPage() {
+        Driver.getInstance().findElement(By.id("menu_download")).findElement(By.tagName("a")).click();
+        Assert.assertEquals(Driver.getInstance().getCurrentUrl(), "http://www.seleniumhq.org/download/");
+    }
+
+    private static String getPageTitle() {
+        return Driver.getInstance().getTitle();
     }
 }

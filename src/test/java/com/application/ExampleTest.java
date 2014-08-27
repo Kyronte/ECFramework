@@ -1,9 +1,6 @@
 package com.application;
 
-import com.common.setup.Driver;
-import com.common.setup.TestHandler;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import com.application.common.BaseTest;
 import org.testng.annotations.Test;
 
 /**
@@ -11,20 +8,18 @@ import org.testng.annotations.Test;
  * Date: 8/25/14
  * Time: 5:05 PM
  */
-public class ExampleTest {
+public class ExampleTest extends BaseTest {
 
-    @BeforeTest
-    public void setUp() {
-        TestHandler.handleTestStart();
-    }
 
     @Test
     public void exampleTest() {
         SeleniumHomePage.isExpectedTitle();
     }
 
-    @AfterTest
-    public void tearDown() {
-        TestHandler.handleTestFinish();
+    @Test
+    public void exampleTest2() {
+        SeleniumHomePage.navigateToDownloadsPage();
     }
+
+
 }

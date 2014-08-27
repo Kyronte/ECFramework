@@ -12,6 +12,7 @@ public class TestHandler {
     private static final String baseUrl = PropertyFileReader.getValueForProperty("environment");
 
     public static void handleTestStart() {
+        Driver.getInstance().manage().window().maximize();
         Driver.getInstance().get(baseUrl);
     }
 
