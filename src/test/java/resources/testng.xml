@@ -1,0 +1,11 @@
+<suite name="ECFrameworkSuite" preserve-order="false">
+    <test name="Smoke">
+        <classes>
+            <class name="com.application.ExampleTest">
+                <methods>
+                    <include name="exampleTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

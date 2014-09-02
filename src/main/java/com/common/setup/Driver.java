@@ -39,13 +39,6 @@ public class Driver {
         return driver;
     }
 
-/*
-    public static WebDriver getInstance() {
-        if (driver == null) {
-            driver = browserStrategy.getNewDriver();
-        }
-        return driver;
-    }*/
 
 
 
