@@ -1,18 +1,9 @@
 package com.application;
 
-import com.common.setup.Driver;
 import com.common.setup.TestHandler;
-import com.common.utils.PropertyFileReader;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
-import org.testng.IInvokedMethod;
-import org.testng.ITestContext;
-import org.testng.Reporter;
-import org.testng.annotations.*;
-
-import java.lang.reflect.Method;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 /**
  * User: mbauer
@@ -32,7 +23,7 @@ public class ExampleTest {
         System.out.println("Asserting page title");
     }
 
-/*    @Test(testName = "Navigate to Projects Page Test")
+    @Test(testName = "Navigate to Projects Page Test")
     public void exampleTest2() {
         SeleniumHomePage.navigateToProjectsPage();
         System.out.println("Navigate to Projects page");
@@ -42,7 +33,7 @@ public class ExampleTest {
     public void exampleTest3() {
         SeleniumHomePage.navigateToDownloadsPage();
         System.out.println("Navigate to Download page");
-    }*/
+    }
 
     @AfterMethod
     public void tearDown() {
